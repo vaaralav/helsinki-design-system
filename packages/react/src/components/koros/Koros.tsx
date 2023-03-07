@@ -42,7 +42,7 @@ export type KorosProps = {
 const getSVG = (dense: boolean, type: string, patternName: string): React.SVGProps<SVGElement> => {
   const transform = `scale(${dense ? 1.8 : 5.3})`;
   const patterns = {
-    basic: <path transform={transform} d="M0,800h20V0c-4.9,0-5,2.6-9.9,2.6S5,0,0,0V800z" />,
+    basic: <path transform={transform} d="m0,15v81h96v-81c-24,0-24-15-48-15s-24,15-48,15z" />,
     beat: (
       <path
         transform={transform}
@@ -62,8 +62,8 @@ const getSVG = (dense: boolean, type: string, patternName: string): React.SVGPro
           id={`${patternName}`}
           x="0"
           y="0"
-          width={`${dense ? 35 : 106}`}
-          height="85"
+          width={`${dense ? 32 : 96}`}
+          height="96"
           patternUnits="userSpaceOnUse"
         >
           {patterns[type]}
