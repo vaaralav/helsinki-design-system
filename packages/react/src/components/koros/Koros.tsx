@@ -46,13 +46,13 @@ const getSVG = (dense: boolean, type: string, patternName: string): React.SVGPro
     beat: (
       <path
         transform={transform}
-        d="M20,800H0V0c2.8,0,3.5,2.3,3.5,2.3l2.8,8.4c0.6,1.5,1.9,2.5,3.6,2.5c2.8,0,3.6-2.5,3.6-2.5s2.8-8.1,2.8-8.2 C17,1,18.3,0,20,0V800z"
+        d="m0,63v33h96v-33c-12,0-16.2-12-16.2-12l-15.6-39s-4.2-12-16.2-12-16.2,12-16.2,12l-15.6,39s-4.2,12-16.2,12z"
       />
     ),
-    pulse: <path transform={transform} d="M0,800h20V0c-5.1,0-5.1,6.4-10,6.4S4.9,0,0,0V800z" />,
-    storm: <path transform={transform} d="M20,800V0c-2.3,5.5-8.7,8.1-14.3,5.7C3.1,4.7,1.2,2.6,0,0v800H20z" />,
-    wave: <polygon transform={transform} points="0,800 20,800 20,0 9.8,10.1 0,0 " />,
-    calm: <path transform={transform} d="M788 0.279785H0V109.739H788V0.279785Z" />,
+    pulse: <path transform={transform} d="m0,30v66h96v-66c-24,0-24-30-48-30s-24,30-48,30z" />,
+    storm: <path transform={transform} d="m0,30v66h96v-66c-24,0-39-11.1-48-30-9,18.9-24,30-48,30z" />,
+    wave: <polygon transform={transform} points="m0,0v96h96v-96l-48,48z" />,
+    calm: <path transform={transform} d="m0,0v96h96v-96z" />,
   };
 
   return (
