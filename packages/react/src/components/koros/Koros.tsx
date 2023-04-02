@@ -40,19 +40,19 @@ export type KorosProps = {
 };
 
 const getSVG = (dense: boolean, type: string, patternName: string): React.SVGProps<SVGElement> => {
-  const transform = `scale(${dense ? 1.8 : 5.3})`;
+  const transform = `scale(${dense ? 1 : 3})`;
   const patterns = {
-    basic: <path transform={transform} d="m0,15v81h96v-81c-24,0-24-15-48-15s-24,15-48,15z" />,
+    basic: <path transform={transform} d="m0 5v80h32v-80c-8 0-8-5-16-5s-8 5-16 5z" />,
     beat: (
       <path
         transform={transform}
-        d="m0,63v33h96v-33c-12,0-16.2-12-16.2-12l-15.6-39s-4.2-12-16.2-12-16.2,12-16.2,12l-15.6,39s-4.2,12-16.2,12z"
+        d="m0 21v64h32v-64c-4 0-5.4-4-5.4-4l-5.2-13s-1.4-4-5.4-4-5.4 4-5.4 4l-5.2 13s-1.4 4-5.4 4z"
       />
     ),
-    pulse: <path transform={transform} d="m0,30v66h96v-66c-24,0-24-30-48-30s-24,30-48,30z" />,
-    storm: <path transform={transform} d="m0,30v66h96v-66c-24,0-39-11.1-48-30-9,18.9-24,30-48,30z" />,
-    wave: <polygon transform={transform} points="m0,0v96h96v-96l-48,48z" />,
-    calm: <path transform={transform} d="m0,0v96h96v-96z" />,
+    pulse: <path transform={transform} d="m0 10v75h32v-75c-8 0-8-10-16-10s-8 10-16 10z" />,
+    storm: <path transform={transform} d="m0 10v75h32v-75c-8 0-13-3.7-16-10-3 6.3-8 10-16 10z" />,
+    wave: <path transform={transform} d="m0 0v85h32v-85l-16 16z" />,
+    calm: <path transform={transform} d="m0 0v85h32v-85z" />,
   };
 
   return (
@@ -63,13 +63,13 @@ const getSVG = (dense: boolean, type: string, patternName: string): React.SVGPro
           x="0"
           y="0"
           width={`${dense ? 32 : 96}`}
-          height="96"
+          height="85"
           patternUnits="userSpaceOnUse"
         >
           {patterns[type]}
         </pattern>
       </defs>
-      <rect fill={`url(#${patternName})`} width="100%" height="85" />
+      <rect fill={`url(#${patternName})`} width="100%" height="85" style={{ shapeRendering: 'crispEdges' }} />
     </svg>
   );
 };
@@ -84,9 +84,10 @@ export const Koros = ({
 }: KorosProps) => {
   const patternName = `koros_${type}`;
   const [id] = useState(uniqueId(`${patternName}-`));
-  const cssTransforms: string[] = [flipHorizontal && 'scaleY(-1)', rotate && `rotate(${rotate}) translateZ(0)`].filter(
-    (t) => !!t,
-  );
+  const cssTransforms: string[] = [
+    flipHorizontal && 'scaleY(-1) translateZ(0)',
+    rotate && `rotate(${rotate}) translateZ(0)`,
+  ].filter((t) => !!t);
 
   return (
     <div
