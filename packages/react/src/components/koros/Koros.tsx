@@ -6,7 +6,7 @@ import 'hds-core';
 import classNames from '../../utils/classNames';
 import styles from './Koros.module.css';
 
-export type KorosType = 'basic' | 'beat' | 'pulse' | 'storm' | 'wave' | 'calm';
+export type KorosType = 'basic' | 'beat' | 'pulse' | 'wave' | 'vibration' | 'calm';
 
 type RotateDegrees = '45deg' | '90deg' | '135deg' | '180deg' | '225deg' | '270deg' | '315deg';
 
@@ -49,8 +49,8 @@ const getSVG = (dense: boolean, type: string, patternName: string): React.SVGPro
       />
     ),
     pulse: <path transform={transform} d="m0 10v75h32v-75c-8 0-8-10-16-10s-8 10-16 10z" />,
-    storm: <path transform={transform} d="m0 10v75h32v-75c-8 0-13-3.7-16-10-3 6.3-8 10-16 10z" />,
-    wave: <path transform={transform} d="m0 0v85h32v-85l-16 16z" />,
+    wave: <path transform={transform} d="m0 10v75h32v-75c-8 0-13-3.7-16-10-3 6.3-8 10-16 10z" />,
+    vibration: <path transform={transform} d="m0 0v85h32v-85l-16 16z" />,
     calm: <path transform={transform} d="m0 0v85h32v-85z" />,
   };
 
