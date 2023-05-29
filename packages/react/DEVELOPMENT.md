@@ -28,7 +28,7 @@ yarn start:react
 | yarn test                          | Runs the tests.                                           |
 | yarn lint                          | Runs the linting.                                         |
 | yarn scaffold                      | Runs the scaffolding script for creating a new component. |
-| yarn visual-test                   | Runst the visual regression tests.                        |
+| yarn visual-test                   | Runs the visual regression tests.                         |
 | yarn update-reference-images       | Update reference images for visual regression tests.      |
 
 ## Adding a component
