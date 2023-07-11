@@ -56,19 +56,6 @@ export const Vibration = () => `
   </div>
 `;
 
-export const Vibration = () => `
-  <div class="hds-koros">
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="100%" height="85">
-      <defs>
-        <pattern id="korosWave" x="0" y="0" width="96" height="85" patternUnits="userSpaceOnUse">
-          <path transform="scale(3)" d="m0 10v75h32v-75c-8 0-13-3.7-16-10-3 6.3-8 10-16 10z" />
-        </pattern>
-      </defs>
-      <rect fill="url(#korosWave)" width="100%" height="85" style="shapeRendering:'crispEdges'" />
-    </svg>
-  </div>
-`;
-
 export const Calm = () => `
   <div class="hds-koros">
     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="100%" height="85">
