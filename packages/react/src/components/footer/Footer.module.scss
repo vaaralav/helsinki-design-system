@@ -1,11 +1,11 @@
 @value small-down, medium-up, large-up, x-large-up from "../../styles/breakpoints.scss";
 
 $koros-heights: (
-  'basic': 14px,
+  'basic': 15px,
   'beat': 70px,
   'pulse': 34px,
-  'storm': 35px,
-  'wave': 54px,
+  'wave': 35px,
+  'vibration': 54px,
 );
 
 .footer {
