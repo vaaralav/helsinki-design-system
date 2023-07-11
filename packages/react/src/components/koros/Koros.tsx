@@ -76,7 +76,7 @@ const getSVG = (dense: boolean, type: string, patternName: string): React.SVGPro
 
 // first number is default, second for dense
 const waveHeights: Record<KorosType, [number, number]> = {
-  basic: [14, 5],
+  basic: [15, 5],
   beat: [70, 24],
   pulse: [34, 12],
   wave: [35, 12],
