@@ -11,7 +11,7 @@ import { HeaderLanguageSelector } from './components/headerLanguageSelector';
 import { HeaderSearch } from './components/headerSearch';
 import { SkipLink } from '../../internal/skipLink';
 import { LanguageProvider, LanguageProviderProps } from './LanguageContext';
-import { HeaderCustomTheme } from './Header.type';
+import { HeaderTheme } from './Header.type';
 // import base styles
 import '../../styles/base.css';
 import styles from './Header.module.scss';
@@ -37,7 +37,7 @@ export interface HeaderNodeProps extends HeaderAttributes {
   /**
    * theme of the header element.
    */
-  theme?: HeaderCustomTheme;
+  theme?: HeaderTheme;
 }
 
 export interface HeaderProps extends HeaderNodeProps {
@@ -48,7 +48,7 @@ const HeaderNode: ComponentType<HeaderNodeProps> = ({ ariaLabel, children, class
   const { isNotLargeScreen } = useHeaderContext();
   const { theme } = props;
 
-  const customThemeClass = useTheme<HeaderCustomTheme>(styles.header, theme);
+  const customThemeClass = useTheme<HeaderTheme>(styles.header, theme);
   const headerClassNames = classNames(
     'hds-header',
     styles.header,
