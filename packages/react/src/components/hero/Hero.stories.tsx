@@ -213,9 +213,10 @@ const NavigationComponent = () => (
       <Header.Link href="#" label="Link" active onClick={(e) => e.preventDefault()} />
       <Header.Link href="#" label="Link" onClick={(e) => e.preventDefault()} />
       <Header.Link href="#" label="Link" onClick={(e) => e.preventDefault()} />
+      <Header.Link href="#" label="Link" onClick={(e) => e.preventDefault()} />
       <Header.Link
         href="#"
-        label="Link"
+        label="Dropdown"
         onClick={(e) => e.preventDefault()}
         dropdownLinks={[
           <Header.Link href="#" label="Link" onClick={(e) => e.preventDefault()} />,
