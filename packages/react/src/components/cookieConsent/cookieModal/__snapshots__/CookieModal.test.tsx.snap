@@ -35,7 +35,7 @@ exports[`<CookieModal /> spec renders the component 1`] = `
               data-testid="cookie-consent-language-switcher"
             >
               <div
-                class="menuButton languageSelectorOverride"
+                class="menuButton languageSelectorOverride languageDropdown"
               >
                 <button
                   aria-controls="cookie-consent-language-selector-menu"
@@ -74,43 +74,42 @@ exports[`<CookieModal /> spec renders the component 1`] = `
                   role="region"
                   style="top: 10px; min-width: 190px;"
                 >
-                  <a
-                    aria-current="page"
-                    class="item "
-                    data-testid="cookie-consent-language-option-fi"
-                    href="#"
-                    lang="fi"
+                  <span
+                    class="navigationLinkWrapper depth-0"
                   >
-                    <span
-                      class="label"
+                    <a
+                      class="link linkM headerLink depth-0 item  active"
+                      data-testid="cookie-consent-language-option-fi"
+                      href="#"
+                      lang="fi"
                     >
                       Suomeksi (FI)
-                    </span>
-                  </a>
-                  <a
-                    class="item "
-                    data-testid="cookie-consent-language-option-sv"
-                    href="#"
-                    lang="sv"
+                    </a>
+                  </span>
+                  <span
+                    class="navigationLinkWrapper depth-0"
                   >
-                    <span
-                      class="label"
+                    <a
+                      class="link linkM headerLink depth-0 item "
+                      data-testid="cookie-consent-language-option-sv"
+                      href="#"
+                      lang="sv"
                     >
                       Svenska (SV)
-                    </span>
-                  </a>
-                  <a
-                    class="item "
-                    data-testid="cookie-consent-language-option-en"
-                    href="#"
-                    lang="en"
+                    </a>
+                  </span>
+                  <span
+                    class="navigationLinkWrapper depth-0"
                   >
-                    <span
-                      class="label"
+                    <a
+                      class="link linkM headerLink depth-0 item "
+                      data-testid="cookie-consent-language-option-en"
+                      href="#"
+                      lang="en"
                     >
                       English (EN)
-                    </span>
-                  </a>
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
