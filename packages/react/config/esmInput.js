@@ -47,5 +47,6 @@ const esmInput = {
   'icons/index': 'src/icons/index.ts',
   index: 'src/index.ts',
   'ssr/index': 'src/ssr/index.ts',
+  'internal/MenuButton/index': 'src/internal/menuButton/MenuButton.tsx',
 };
 module.exports = esmInput;
