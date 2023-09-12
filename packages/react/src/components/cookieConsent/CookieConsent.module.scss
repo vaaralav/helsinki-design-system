@@ -1,5 +1,4 @@
 @import '../../styles/common.scss';
-@value small-down from "../../styles/breakpoints.scss";
 
 .container {
   bottom: 0;
@@ -139,7 +138,7 @@
   }
 }
 
-@media small-down {
+@media (min-width: 768px) {
   .languageDropdown {
     position: absolute;
     right: var(--spacing-5-xl);
