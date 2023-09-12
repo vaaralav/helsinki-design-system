@@ -1,4 +1,5 @@
 @import '../../styles/common.scss';
+@value small-down from "../../styles/breakpoints.scss";
 
 .container {
   bottom: 0;
@@ -40,7 +41,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  
+
   & > :first-child {
     margin-right: var(--common-spacing);
   }
@@ -107,18 +108,42 @@
   top: var(--common-spacing);
 }
 
-.languageSelectorOverride {
+.languageDropdown {
   position: relative;
   right: unset;
+
+  button {
+    padding-top: 0;
+  }
+
+  &#{&} {
+    --menu-button-focus-outline-color: var(--header-focus-outline-color);
+
+    > div {
+      left: 0;
+      right: unset;
+
+      // remove margins from children
+      * {
+        margin: 0;
+      }
+
+      > * {
+        // add margin to icons
+        span:first-of-type:not(:only-of-type) {
+          align-self: flex-start;
+          margin: 0 var(--spacing-2-xs) 0 calc(var(--spacing-3-xs) * -1);
+        }
+      }
+    }
+  }
 }
 
-.languageSelectorOverride > button {
-  padding-top: 0;
-}
-
-.languageSelectorOverride > button + div {
-  left: 0;
-  right: unset;
+@media small-down {
+  .languageDropdown {
+    position: absolute;
+    right: var(--spacing-5-xl);
+  }
 }
 
 .mainContent,

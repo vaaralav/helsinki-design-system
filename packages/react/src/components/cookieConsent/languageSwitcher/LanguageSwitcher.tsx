@@ -24,7 +24,7 @@ export function LanguageSwitcher(): React.ReactElement {
 
   return (
     <MenuButton
-      className={classNames(styles.languageSelectorOverride, styles.languageDropdown)}
+      className={classNames(styles.languageDropdown)}
       id={languageSelectorId}
       label={currentOption.label}
       menuOffset={10}
