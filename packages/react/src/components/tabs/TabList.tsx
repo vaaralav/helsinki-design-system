@@ -28,8 +28,8 @@ export const TabList = ({ children, className, style = {} }: TabListProps) => {
   const { focusedTab, setFocusedTab } = useContext(TabsContext);
   const [tablistWidth, setTablistWidth] = useState<number>(0);
   const [scrollIndex, setScrollIndex] = useState<number>(null);
-  const [showPreviousButton, setShowPreviousButton] = useState(true);
-  const [showNextButton, setShowNextButton] = useState(true);
+  const [showPreviousButton, setShowPreviousButton] = useState(false);
+  const [showNextButton, setShowNextButton] = useState(false);
   const [scrollValue, setScrollValue] = useState<number>(0);
 
   const childElements = getChildrenAsArray(children);
