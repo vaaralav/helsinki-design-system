@@ -5,3 +5,10 @@ _bundles/
 *.css.d.ts
 .loki/current
 .loki/difference
+
+# Ignore build output
+*.d.ts
+*.js
+*.css
+# ...but keep config files in root
+!*.config.js
