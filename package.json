@@ -10,11 +10,11 @@
     "build": "yarn build:tokens && yarn build:core && yarn build:react && yarn build:site",
     "build:tokens": "lerna run --scope hds-design-tokens build",
     "build:core": "lerna run --scope hds-core build",
-    "build:react": "lerna run --scope hds-react build",
+    "build:react": "lerna run --scope @vaaralav/hds-react build",
     "build:site": "lerna run --scope site build",
     "clean": "lerna clean --yes && rimraf node_modules/ packages/core/lib packages/core/storybook-static packages/react/lib packages/react/storybook-static packages/design-tokens/lib site/.cache site/public",
     "start:core": "lerna run --scope hds-core start",
-    "start:react": "lerna run --scope hds-react start",
+    "start:react": "lerna run --scope @vaaralav/hds-react start",
     "release": "lerna publish from-package --yes",
     "update-versions": "lerna version --exact --no-git-tag-version --no-push --amend --yes"
   },
