@@ -113,6 +113,12 @@ export type StepperProps = {
    * Custom theme
    */
   theme?: StepperCustomTheme; // Custom theme styles
+
+  /**
+   * Show or hide next/previous buttons
+   * @default true
+   */
+  scrollButtons?: boolean;
 };
 
 const getStepHeading = (language: Language, stepIndex: number, totalNumberOfSteps: number, label: string) => {
@@ -138,6 +144,7 @@ export const Stepper = ({
   renderCustomStepHeading,
   steps,
   theme,
+  scrollButtons = true,
 }: StepperProps) => {
   const stepsTotal = steps.length;
   const initialRender = useRef(true);
@@ -171,7 +178,7 @@ export const Stepper = ({
     initialRender.current = false;
 
     if (stepperRef.current.scrollLeft > 5) {
-      setShowPreviousButton(true);
+      setShowPreviousButton(scrollButtons);
     } else {
       setShowPreviousButton(false);
     }
@@ -180,7 +187,7 @@ export const Stepper = ({
       stepperRef.current.scrollWidth - (stepperRef.current.parentNode.clientWidth + stepperRef.current.scrollLeft) >
       5
     ) {
-      setShowNextButton(true);
+      setShowNextButton(scrollButtons);
     } else {
       setShowNextButton(false);
     }
@@ -221,14 +228,14 @@ export const Stepper = ({
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           if (e.target.scrollLeft && e.target.scrollLeft > 5) {
-            setShowPreviousButton(true);
+            setShowPreviousButton(scrollButtons);
           } else {
             setShowPreviousButton(false);
           }
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           if (e.target.scrollWidth - (e.target.parentNode.clientWidth + e.target.scrollLeft) > 5) {
-            setShowNextButton(true);
+            setShowNextButton(scrollButtons);
           } else {
             setShowNextButton(false);
           }
